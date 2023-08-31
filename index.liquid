@@ -1,0 +1,77 @@
+---
+layout: default
+title: Welcome!
+---
+
+<style>
+  .me {
+    color: #4a83ff;
+    transition: color 0.2s ease-in-out;
+  }
+  .me:hover {color: #b770ff;}
+</style>
+
+<noscript class="uibox" style="--ui-bg: #ff5959; --ui-corner1: #ff9e9ee3; margin-bottom: 15px; text-shadow: 3px 3px #000;">
+  <p style="margin: 10px;">⚠ JavaScript isn't enabled.. Some stuff may not work!</p>
+</noscript>
+<p>
+  This is a quite medium size passion project that started in December 2022!<br>
+  Mostly to kind of port the minigames to Java Edition, but simple and with my spin on them<br>
+  Very cool project to test my coding skills and resource pack <em>(Yup, only resource packs and plugins)</em> !<br>
+  I've always wanted to do something for Minecraft LCE, since it was just so good to play<br>
+  (And it still is, but i dont have much time..)<br>
+  Anyways, you can <b>check out the screenshots!</b>
+</p>
+<br>
+<button class="button mc c" style="--button-size: 16pt;" onclick="toggleDisplay('lobby', 'visible');">Lobby Screenshots</button>
+<section class="part" id="lobby"><div>
+  <img src="/screenshots/lobby1.png">
+  <img src="/screenshots/lobby2.png">
+  <img src="/screenshots/lobby3.png">
+</div></section>
+<button class="button mc c" style="--button-size: 16pt;" onclick="toggleDisplay('battle', 'visible');">Battle Screenshots</button>
+<section class="part" id="battle"><div>
+  <img src="/screenshots/battle_chest.png">
+</div></section>
+<button class="button mc c" style="--button-size: 16pt;" onclick="toggleDisplay('glide', 'visible');">Glide Screenshots</button>
+<section class="part" id="glide"><div>
+  <img src="/screenshots/glide_vbooster.png">
+  <img src="/screenshots/glide_gameplay1.png">
+  <img src="/screenshots/glide_gameplay2.png">
+</div></section>
+<button class="button mc c" style="--button-size: 16pt;" onclick="toggleDisplay('tumble', 'visible');">Tumble Screenshots</button>
+<section class="part" id="tumble"><div>
+  <img src="/screenshots/tumble_gameplay1.png">
+  <img src="/screenshots/tumble_gameplay2.png">
+</div></section>
+<br><br>
+<p>
+  I plan on always updating it to the newest Minecraft versions when possible, and still support some old versions.
+  Also I always try to keep the new look of Minecraft in the resourcepack. Like the icons and custom GUIs.
+  Keeping all the original stuff like lobby secrets, old features are also important!
+</p>
+<p>I'm happy that the hosting feature works :&#41;</p>
+<br>
+<section class="effectbox" style="margin: auto;">
+  <p>
+    If you want to play or test it... You can.. maybe<br>
+    Well you can contact me on Discord!<br>
+    Its not finished yet so yeah, still in beta.
+  </p>
+</section>
+<br>
+<p style="text-align: center;">
+  I'd like to thank all of Minecraft: Legacy Console Edition's<br>
+  original creators: <b>4J Studios</b>, as well as its beautiful community!<br>
+  This project <b>wouldn't</b> exist without them! 
+</p>
+<a href="https://4jstudios.com/" target="_blank" rel="noopener noreferrer">
+  <img src="/assets/wow/4J.png" width="320px" style="image-rendering: auto; margin: 0 auto 0 auto;">
+</a>
+<br><br>
+
+<script src="/tips.js"></script>
+<script src="/bg.js"></script>
+<script>
+  function toggleDisplay(id, cla) {document.getElementById(id).classList.toggle(cla);}
+</script>

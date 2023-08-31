@@ -1,0 +1,148 @@
+:root {
+  --button-size: 28pt;
+  
+  /* uibox */
+  --ui-bg: #c6c6c6;
+  --ui-corner1: #ffffffe3;
+  --ui-corner2: #0000006e;
+  --ui-border: #000;
+  --ui-shadow: #000;
+
+  /* uibox2 */
+  --effbox-bg: #212121;
+  --effbox-inborder: #555555;
+  --effbox-border: #000;
+
+  /* tipbox */
+  --tip-bg: #18525cbb;
+  --tip-inborder: #fff;
+  --tip-border: #dfdfdf;
+}
+
+@font-face {
+  font-family: Minecraft;
+  src: url(/assets/mojangles.ttf);
+}
+::selection {
+  background-color: rgb(0, 68, 255);
+  color: #fff;
+}
+html {color-scheme: light;}
+body {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  image-rendering: pixelated;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+  background-color: #002033;
+  /* bg settings bad plz kill me */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url(/screenshots/battle1.png);
+}
+body h1 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 5px 5px 0 #000;
+}
+.mc {
+  font-family: Minecraft, system-ui;
+  letter-spacing: -1px;
+}
+a {text-decoration: none;}
+img, svg, video {
+  max-width: 100%;
+  display: block;
+}
+main:first-of-type {
+  color: #000;
+  width: min(70ch, 100% - 4rem);
+  margin: 15px 0 15px 0;
+  padding: 5px 15px 1px 15px;
+}
+main h2 {font-weight: normal;}
+.button {
+  height: 30pt;
+  width: calc(var(--button-size) * 10);
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  border: 2px solid #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 5px 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  background-color: #999;
+  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
+  text-shadow: 2px 2px #202013CC;
+  background-image: url(/assets/button.png);
+}
+.button:hover {border: 2px solid #fff;}
+.button:active {
+    background-image: url(/assets/button-pressed.png);
+    box-shadow: none;
+}
+.button.c {margin-inline: auto;}
+.uibox {
+  background-color: var(--ui-bg);
+  box-shadow: inset 5px 5px var(--ui-corner1), inset -5px -5px var(--ui-corner2), 0 0 0 5px var(--ui-border);
+  border-radius: 10px;
+}
+.effectbox {
+  background-color: var(--effbox-bg);
+  box-shadow: 0 0 0 6px var(--effbox-inborder), 0 0 0 9px var(--effbox-border);
+  padding: 10px;
+  max-width: 600px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 5px;
+}
+.effectbox p {margin: 0;}
+.effectbox a {color: rgb(86, 255, 106);}
+.tipbox {
+  color: #fff;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background-color: var(--tip-bg);
+  box-shadow: 0 0 0 4px var(--tip-inborder), 0 0 0 6px var(--tip-border);
+  border-radius: 5px;
+  max-width: 90%;
+}
+.tipbox p {margin: 0;}
+.part {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease-in-out;
+}
+.part div:first-of-type {overflow: hidden;}
+.part.visible {grid-template-rows: 1fr;}
+.part img {
+  width: 80%;
+  margin: 5px auto 15px auto;
+  box-shadow: 5px 5px 0 #00000069; /* nice */
+}
+footer {
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+footer p {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 600px) {
+  .part img {width: 97%;}
+}

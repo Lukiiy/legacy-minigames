@@ -1,0 +1,16 @@
+{
+  "name": "eleventy",
+  "version": "1.0.0",
+  "description": "Website wo!",
+  "main": "index.js",
+  "scripts": {
+    "run": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "Lukiiy",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

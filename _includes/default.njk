@@ -6,29 +6,30 @@ title: O_o
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="A mini-documentary/blog about my remake on Legacy Console Edition">
+  <meta name="description" content="A mini-documentary/blog about my Legacy Console Edition remake">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_32x32.png">
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="shortcut icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="/style.css">
-  <title>Lukiiy's Legacy Minigames: {{ title }}</title>
+  <link rel="stylesheet" href="https://lukiiy.netlify.app/minecraft/button.css">
+  <title>Lukiiy's LCE: {{ title }}</title>
 </head>
-<body class="mc">
+<body>
   <header>
-    <h1><a class="me" href="https://lukiiy.netlify.app/" target="_blank" rel="noopener noreferrer">Lukiiy</a>'s Legacy Console Minigames</h1>
+    <img src="/assets/main.png" alt="LukiiyLCE Logo">
   </header>
+  <p class="tipbox" id="t"></p>
+  <noscript>It looks like you have JS disabled!</noscript>
   <main class="uibox">
     {{ content | safe }}
-    <p>This project is not affiliated with or supported by Mojang, 4J Studios or Microsoft.</p>
-    <footer>
-      <br>
-      <img src="assets/Bandeira.png" alt="Made in Brazil!" title="🇧🇷 Made in Brazil! 🇧🇷" width="64px">
-      <p>
-        <span style="color: #5865f2;">Discord: lukiiy</span>
-        <em>Website & Project made by <a class="me" href="https://lukiiy.netlify.app/" target="_blank" rel="noopener noreferrer">Lukiiy</a> with ❤!</em>
-      </p>
-    </footer>
   </main>
+  <footer>
+    <p>
+      <em>Project made by <a class="me" href="https://lukiiy.github.io/" target="_blank">Lukiiy</a> with ❤!</em><br>
+      <span style="color: #56f;">Discord: lukiiy</span> | Made in Brazil <img src="/assets/Bandeira.png" alt="" width="16px">
+    </p>
+    <p style="color: #555; font-size: 1rem;">Not affiliated with Mojang, 4J Studios or Microsoft.</p>
+  </footer>
 </body>
 </html>

@@ -1,148 +1,117 @@
-:root {
-  --button-size: 28pt;
-  
-  /* uibox */
-  --ui-bg: #c6c6c6;
-  --ui-corner1: #ffffffe3;
-  --ui-corner2: #0000006e;
-  --ui-border: #000;
-  --ui-shadow: #000;
-
-  /* uibox2 */
-  --effbox-bg: #212121;
-  --effbox-inborder: #555555;
-  --effbox-border: #000;
-
-  /* tipbox */
-  --tip-bg: #18525cbb;
-  --tip-inborder: #fff;
-  --tip-border: #dfdfdf;
-}
-
-@font-face {
-  font-family: Minecraft;
-  src: url(/assets/mojangles.ttf);
-}
-::selection {
-  background-color: rgb(0, 68, 255);
-  color: #fff;
-}
-html {color-scheme: light;}
-body {
-  display: flex;
-  justify-content: center;
-  place-items: center;
-  image-rendering: pixelated;
-  flex-direction: column;
-  color: #fff;
-  font-size: 1.25rem;
+* {
   padding: 0;
   margin: 0;
-  background-color: #002033;
-  /* bg settings bad plz kill me */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+}
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #303030;
   background-image: url(/screenshots/battle1.png);
-}
-body h1 {
-  text-align: center;
-  color: #fff;
-  text-shadow: 5px 5px 0 #000;
-}
-.mc {
-  font-family: Minecraft, system-ui;
-  letter-spacing: -1px;
-}
-a {text-decoration: none;}
-img, svg, video {
-  max-width: 100%;
-  display: block;
-}
-main:first-of-type {
-  color: #000;
-  width: min(70ch, 100% - 4rem);
-  margin: 15px 0 15px 0;
-  padding: 5px 15px 1px 15px;
-}
-main h2 {font-weight: normal;}
-.button {
-  height: 30pt;
-  width: calc(var(--button-size) * 10);
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  user-select: none;
-  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
+  color: #000;
+  text-align: center;
+  padding-bottom: 100px;
   image-rendering: pixelated;
-  border: 2px solid #000;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 5px 0 5px 0;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-  background-color: #999;
-  box-shadow: inset -2px -4px #0006, inset 2px 2px #FFF7;
-  text-shadow: 2px 2px #202013CC;
-  background-image: url(/assets/button.png);
 }
-.button:hover {border: 2px solid #fff;}
-.button:active {
-    background-image: url(/assets/button-pressed.png);
-    box-shadow: none;
-}
-.button.c {margin-inline: auto;}
-.uibox {
-  background-color: var(--ui-bg);
-  box-shadow: inset 5px 5px var(--ui-corner1), inset -5px -5px var(--ui-corner2), 0 0 0 5px var(--ui-border);
-  border-radius: 10px;
-}
-.effectbox {
-  background-color: var(--effbox-bg);
-  box-shadow: 0 0 0 6px var(--effbox-inborder), 0 0 0 9px var(--effbox-border);
-  padding: 10px;
-  max-width: 600px;
-  margin: 5px;
+header, footer {
+  background-size: 64px;
+  padding: 15px 0;
   color: #fff;
-  border-radius: 5px;
 }
-.effectbox p {margin: 0;}
-.effectbox a {color: rgb(86, 255, 106);}
-.tipbox {
-  color: #fff;
-  margin: 0 0 10px 0;
-  padding: 10px;
-  background-color: var(--tip-bg);
-  box-shadow: 0 0 0 4px var(--tip-inborder), 0 0 0 6px var(--tip-border);
-  border-radius: 5px;
-  max-width: 90%;
+header {
+  background-image: url(/assets/headerbg.png);
+  box-shadow: 0 10px 8px #0000003d;
 }
-.tipbox p {margin: 0;}
-.part {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s ease-in-out;
-}
-.part div:first-of-type {overflow: hidden;}
-.part.visible {grid-template-rows: 1fr;}
-.part img {
-  width: 80%;
-  margin: 5px auto 15px auto;
-  box-shadow: 5px 5px 0 #00000069; /* nice */
+header img {
+  height: 96px;
+  image-rendering: auto;
+  filter: drop-shadow(0 6px 4px #00000057);
 }
 footer {
+  background-image: url(/assets/footerbg.png);
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -10px 8px #0000003d;
+}
+footer a {color: #2e9f2e;}
+img, video {max-width: 100%;}
+main {
+  width: min(80ch, 100% - 1rem);
+  margin-inline: auto;
+  text-align: start;
+}
+.uibox {
+  margin: 5px auto;
+  border-radius: 12px 8px;
+  background: #C6C6C6;
+  box-shadow: -6px -6px 0px 0px rgba(0, 0, 0, 0.35) inset, 6px 6px 0px 0px #fff inset, 0px 0px 0px 3px #000;
+  padding: 10px;
+}
+.tipbox:empty {display: none;}
+.tipbox {
   color: #fff;
-  text-shadow: 2px 2px 0 #000;
+  padding: 10px;
+  margin: 6px auto;
+  background-color: rgba(24, 82, 92, 0.75);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #dfdfdf;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 80%;
 }
-footer p {
-  display: flex;
-  justify-content: space-between;
+#t {margin: 10px auto;}
+
+/* Font files taken from https://github.com/IdreesInc/Minecraft-Font */
+/* Part of the code taken from my website */
+@font-face {
+  font-family: Minecraft;
+  src: url(/assets/Minecraft.otf);
 }
-@media only screen and (max-width: 600px) {
-  .part img {width: 97%;}
+@font-face {
+  font-family: MinecraftBold;
+  src: url(/assets/Minecraft-Bold.otf);
 }
+.mc, body {
+  font-family: Minecraft, Noto Sans, sans-serif;
+  letter-spacing: -.4pt;
+  text-rendering: auto;
+}
+.mc.bold, h1, h2, h3, h4, h5, h6 {
+  font-family: MinecraftBold, Minecraft, Noto Sans, sans-serif;
+  font-weight: normal;
+}
+
+/* Minecraft Formatting Color Codes */
+.black {color: #000;}
+.dark_blue {color: #00A;}
+.dark_green {color: #0A0;}
+.dark_aqua {color: #0AA;}
+.dark_red {color: #A00;}
+.dark_purple {color: #A0A;}
+.gold {color: #FA0;}
+.gray {color: #AAA;}
+.dark_gray {color: #555;}
+.blue {color: #55F;}
+.green {color: #5F5;}
+.aqua {color: #5FF;}
+.red {color: #F55;}
+.light_purple {color: #F5F;}
+.yellow {color: #FF5;}
+.white {color: #FFF;};
+.minecoin_gold {color: #DDD605;}
+.material_quartz {color: #E3D4D1;}
+.material_iron {color: #CECACA;}
+.material_netherite {color: #443A3B;}
+.material_redstone {color: #971607;}
+.material_copper {color: #B4684D;}
+.material_gold {color: #DEB12D;}
+.material_emerald {color: #47A036;}
+.material_diamond {color: #2CBAA8;}
+.material_lapis {color: #21497B;}
+.material_amethyst {color: #9A5CC6;}

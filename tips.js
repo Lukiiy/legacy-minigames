@@ -1,18 +1,7 @@
-const header = document.getElementsByTagName("header")[0];
-const tipsec = document.createElement("section");
-tipsec.classList.add("tipbox");
+const tip = document.getElementById('t');
 
-const tiptext = document.createElement("p");
-tiptext.id = "tip";
-tiptext.style.display = "none";
-tiptext.style.width = "0";
-tiptext.style.height = "0";
-tiptext.style.textAlign = "center";
-
-tipsec.appendChild(tiptext);
-header.parentNode.insertBefore(tipsec, header.nextSibling);
-
-const tip = [
+// Original tips from https://minecraft.wiki/w/Loading_tips
+const tips = [
   "Use a hoe to prepare areas of ground for planting.",
   "You can change your game spawn point and skip to dawn by sleeping in a bed.",
   "Notch has over a million followers on twitter!",
@@ -80,8 +69,5 @@ const tip = [
   "Don't look an Enderman in the eye!"
 ]
 
-const randomTip = tip[Math.floor(Math.random() * tip.length)];
-tiptext.innerText = randomTip;
-tiptext.style.display = "";
-tiptext.style.width = "";
-tiptext.style.height = "";
+const random = tips[Math.floor(Math.random() * tips.length)];
+tip.innerText = random;
